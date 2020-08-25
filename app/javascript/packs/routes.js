@@ -491,21 +491,63 @@ Based on Rails 6.0.3.2 routes of TestInertia::Application
     make: function() {
       var routes;
       routes = {
+// cancel_user_registration => /users/cancel(.:format)
+  // function(options)
+  cancel_user_registration: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"cancel",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// destroy_user_session => /users/sign_out(.:format)
+  // function(options)
+  destroy_user_session: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"sign_out",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
 // edit_event => /events/:id/edit(.:format)
   // function(id, options)
   edit_event: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"events",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
+// edit_location => /locations/:id/edit(.:format)
+  // function(id, options)
+  edit_location: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"locations",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
+// edit_user_password => /users/password/edit(.:format)
+  // function(options)
+  edit_user_password: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"password",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
+// edit_user_registration => /users/edit(.:format)
+  // function(options)
+  edit_user_registration: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
 // event => /events/:id(.:format)
   // function(id, options)
   event: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"events",false],[2,[7,"/",false],[2,[3,"id",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
 // events => /events(.:format)
   // function(options)
   events: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"events",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
+// location => /locations/:id(.:format)
+  // function(id, options)
+  location: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"locations",false],[2,[7,"/",false],[2,[3,"id",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// locations => /locations(.:format)
+  // function(options)
+  locations: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"locations",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
 // new_event => /events/new(.:format)
   // function(options)
   new_event: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"events",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// new_location => /locations/new(.:format)
+  // function(options)
+  new_location: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"locations",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// new_user_password => /users/password/new(.:format)
+  // function(options)
+  new_user_password: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"password",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
+// new_user_registration => /users/sign_up(.:format)
+  // function(options)
+  new_user_registration: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"sign_up",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// new_user_session => /users/sign_in(.:format)
+  // function(options)
+  new_user_session: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"sign_in",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
 // root => /
   // function(options)
-  root: Utils.route([], {}, [7,"/",false])}
+  root: Utils.route([], {}, [7,"/",false]),
+// user_password => /users/password(.:format)
+  // function(options)
+  user_password: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"password",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// user_registration => /users(.:format)
+  // function(options)
+  user_registration: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
+// user_session => /users/sign_in(.:format)
+  // function(options)
+  user_session: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"sign_in",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]])}
 ;
       routes.configure = function(config) {
         return Utils.configure(config);

@@ -5,5 +5,5 @@ JsRoutes.setup do |config|
   ]
   config.compact = true
   path = "app/javascript/packs"
-  JsRoutes.generate!("#{path}/app_routes.js")
+  JsRoutes.generate!("#{path}/routes.js")
 end

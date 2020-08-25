@@ -1,12 +1,13 @@
 <template>
-    <h1>Welcome to Events</h1>
+  <div>
+    <h1>Welcome to {{ events }}</h1>
+  </div>
 </template>
 
 <script>
-
-  export default {
-    props: {
-      events: Object,
-    },
-  }
+export default {
+  props: {
+    events: Object,
+  },
+};
 </script>

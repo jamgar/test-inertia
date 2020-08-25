@@ -1,20 +1,18 @@
 class EventsController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @events = Event.all
+    events = EventSerializer.new(Event.all).serializable_hash
     render inertia: 'Events/Index', props: {
-      events: {
-        title: "This is cool title"
-      }
+      events: events
     }
   end
-  def show
-    event = Event.find(params[:id])
 
-    render inertia: 'Event/Show',
+  def show
+    @event = Event.find(params[:id])
+    event = EventSerializer.new(@event).serializable_hash
+    render inertia: 'Events/Show',
       props: {
-        event: event.as_json(
-          only: [ :id, :title, :start_date, :description ]
-        )
+        event: event
       }
   end
 end
