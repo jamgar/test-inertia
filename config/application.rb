@@ -16,8 +16,10 @@ module TestInertia
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.exceptions_app = ->(env) do
-      Class.new(ActionController::Base) do
+      Class.new(ActionController::Base) do # rubocop:disable Rails/ApplicationController
+        puts "=================== class ================"
         def show
+          puts "=============== show ============="
           render inertia: 'Error', props: {
             status: request.path_info[1..].to_i
           }, status: request.path_info[1..].to_i

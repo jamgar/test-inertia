@@ -1,4 +1,5 @@
 require 'active_support/concern'
+# More info: https://pragmaticstudio.com/tutorials/rails-session-cookies-for-api-authentication
 
 module Inertiable
   extend ActiveSupport::Concern
@@ -9,10 +10,18 @@ module Inertiable
     inertia_share errors: -> {
       session.delete(:errors) || []
     }
+
+    inertia_share flash: -> {
+      {
+        success: flash.notice,
+        alert: flash.alert
+      }
+    }
   end
 
   def redirect_to(options = {}, response_options = {})
     if (errors = response_options.delete(:errors))
+      puts "=================== redirect_to errors ================="
       session[:errors] = errors
     end
 

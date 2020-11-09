@@ -4,14 +4,14 @@
     <inertia-link :href="$routes.events()">Events</inertia-link>
 
     <inertia-link v-if="!$page.auth.user" :href="$routes.new_user_session()"
-      >Sign_in</inertia-link
+      >Sign in</inertia-link
     >
 
     <inertia-link
       v-if="$page.auth.user"
       :href="$routes.destroy_user_session()"
       method="delete"
-      >Sign_out</inertia-link
+      >Sign out</inertia-link
     >
   </div>
 </template>

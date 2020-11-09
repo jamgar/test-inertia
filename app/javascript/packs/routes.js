@@ -503,6 +503,12 @@ Based on Rails 6.0.3.2 routes of TestInertia::Application
 // edit_location => /locations/:id/edit(.:format)
   // function(id, options)
   edit_location: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"locations",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
+// edit_note => /notes/:id/edit(.:format)
+  // function(id, options)
+  edit_note: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"notes",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
+// edit_post => /posts/:id/edit(.:format)
+  // function(id, options)
+  edit_post: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"posts",false],[2,[7,"/",false],[2,[3,"id",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
 // edit_user_password => /users/password/edit(.:format)
   // function(options)
   edit_user_password: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"password",false],[2,[7,"/",false],[2,[6,"edit",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
@@ -527,6 +533,12 @@ Based on Rails 6.0.3.2 routes of TestInertia::Application
 // new_location => /locations/new(.:format)
   // function(options)
   new_location: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"locations",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// new_note => /notes/new(.:format)
+  // function(options)
+  new_note: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"notes",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// new_post => /posts/new(.:format)
+  // function(options)
+  new_post: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"posts",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
 // new_user_password => /users/password/new(.:format)
   // function(options)
   new_user_password: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"password",false],[2,[7,"/",false],[2,[6,"new",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]]]),
@@ -536,6 +548,18 @@ Based on Rails 6.0.3.2 routes of TestInertia::Application
 // new_user_session => /users/sign_in(.:format)
   // function(options)
   new_user_session: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"users",false],[2,[7,"/",false],[2,[6,"sign_in",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// note => /notes/:id(.:format)
+  // function(id, options)
+  note: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"notes",false],[2,[7,"/",false],[2,[3,"id",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// notes => /notes(.:format)
+  // function(options)
+  notes: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"notes",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
+// post => /posts/:id(.:format)
+  // function(id, options)
+  post: Utils.route([["id",true],["format",false]], {}, [2,[7,"/",false],[2,[6,"posts",false],[2,[7,"/",false],[2,[3,"id",false],[1,[2,[8,".",false],[3,"format",false]],false]]]]]),
+// posts => /posts(.:format)
+  // function(options)
+  posts: Utils.route([["format",false]], {}, [2,[7,"/",false],[2,[6,"posts",false],[1,[2,[8,".",false],[3,"format",false]],false]]]),
 // root => /
   // function(options)
   root: Utils.route([], {}, [7,"/",false]),
